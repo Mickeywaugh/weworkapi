@@ -24,7 +24,8 @@ class User
     public $email = null;           // string
     public $telephone = null;       // string
     public $isleader = null;        // uint
-    public $avatar_mediaid = null;  // string
+    public $avatar = null;  // string
+    public $thumb_avatar = null;
     public $enable = null;          // uint
     public $extattr = null;         // ExtattrList
     public $status = null;          // uint, 激活状态: 1=已激活，2=已禁用，4=未激活。已激活代表已激活企业微信或已关注微信插件。未激活代表既未激活企业微信又未关注微信插件。
@@ -49,7 +50,8 @@ class User
         $user->email = Utils::arrayGet($arr, "email");
         $user->telephone = Utils::arrayGet($arr, "telephone");
         $user->isleader = Utils::arrayGet($arr, "isleader");
-        $user->avatar_mediaid = Utils::arrayGet($arr, "avatar_mediaid");
+        $user->avatar = Utils::arrayGet($arr, "avatar");
+        $user->thumb_avatar=Utils::arrayGet($arr, "thumb_avatar");
         $user->enable = Utils::arrayGet($arr, "enable");
         $user->status = Utils::arrayGet($arr, "status");
 
