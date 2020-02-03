@@ -22,8 +22,10 @@ class User
     public $position = null;        // string
     public $gender = null;          // uint [bug]
     public $email = null;           // string
+    public $address=null;           //string
     public $telephone = null;       // string
     public $isleader = null;        // uint
+    public $qr_code = null; //string
     public $avatar = null;  // string
     public $thumb_avatar = null;
     public $enable = null;          // uint
@@ -48,8 +50,10 @@ class User
         $user->position = Utils::arrayGet($arr, "position");
         $user->gender = Utils::arrayGet($arr, "gender");
         $user->email = Utils::arrayGet($arr, "email");
+        $user->address = Utils::arrayGet($arr, "address");
         $user->telephone = Utils::arrayGet($arr, "telephone");
         $user->isleader = Utils::arrayGet($arr, "isleader");
+        $user->qr_code = Utils::arrayGet($arr, "qr_code");
         $user->avatar = Utils::arrayGet($arr, "avatar");
         $user->thumb_avatar=Utils::arrayGet($arr, "thumb_avatar");
         $user->enable = Utils::arrayGet($arr, "enable");
