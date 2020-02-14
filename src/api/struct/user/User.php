@@ -14,7 +14,9 @@ use Cium\WeWorkApi\utils\Utils;
 class User
 {
     public $userid = null;          // string
+    public $newuserid = null;          // string
     public $name = null;            // string
+    public $alias = null;            // string
     public $english_name = null;    // string
     public $mobile = null;          // string
     public $department = null;      // uint array
@@ -42,6 +44,8 @@ class User
         $user = new User();
 
         $user->userid = Utils::arrayGet($arr, "userid");
+        $user->newuserid = Utils::arrayGet($arr, "newuserid");
+        $user->alias = Utils::arrayGet($arr, "alias");
         $user->name = Utils::arrayGet($arr, "name");
         $user->english_name = Utils::arrayGet($arr, "english_name");
         $user->mobile = Utils::arrayGet($arr, "mobile");
